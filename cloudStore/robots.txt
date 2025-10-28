@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Allow search engines to crawl all content
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block access to sensitive files (if any)
+Disallow: /*.json$

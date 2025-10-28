@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CloudStore - Premium online shopping destination for electronics, fashion, accessories, and home & kitchen products. Order directly on WhatsApp for fast, personalized service.">
+    <meta name="keywords" content="premium online store, luxury shopping, electronics, fashion, accessories, home goods, WhatsApp commerce, fast delivery">
+    <meta name="author" content="CloudStore">
+    <title>CloudStore - Premium Shopping Experience | WhatsApp Orders</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CloudStore - Premium Shopping Experience">
+    <meta property="og:description" content="Discover amazing products at unbeatable prices. Order directly on WhatsApp for fast, personalized service.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CloudStore - Premium Shopping Experience">
+    <meta name="twitter:description" content="Discover amazing products at unbeatable prices. Order directly on WhatsApp.">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="#home" class="logo-link">
+                        <h1 class="logo">CloudStore</h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#electronics" class="nav-link">Electronics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#fashion" class="nav-link">Fashion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#accessories" class="nav-link">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#home-kitchen" class="nav-link">Home & Kitchen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Premium Shopping Redefined</h1>
+                    <p class="hero-subtitle">
+                        Experience the future of online shopping with curated products, instant WhatsApp ordering, and personalized service that puts you first.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#featured" class="btn btn-primary btn-large">
+                            Explore Collection
+                        </a>
+                        <a href="https://wa.me/+923157603693?text=Hi!%20I%20want%20to%20know%20more%20about%20CloudStore"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-secondary btn-large">
+                            Chat with Us
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-icons">
+                        <span class="icon">📱</span>
+                        <span class="icon">⌚</span>
+                        <span class="icon">🎧</span>
+                        <span class="icon">💻</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="featured" class="featured-products section-padding">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="products-grid">
+                    <div class="product-card" onclick="viewProduct('Premium Laptop', '$899', 'https://picsum.photos/seed/laptop/400/400.jpg', 'High-performance laptop with powerful processor, stunning display, and all-day battery life. Perfect for work, gaming, and entertainment.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/laptop/300/300.jpg" alt="Premium Laptop">
+                            <span class="product-badge">Bestseller</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.9)</span>
+                            </div>
+                            <h3 class="product-name">Premium Laptop</h3>
+                            <p class="product-price">$899</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Premium Laptop', '$899')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Smart Watch', '$299', 'https://picsum.photos/seed/watch/400/400.jpg', 'Advanced smartwatch with health monitoring, GPS tracking, and smartphone integration. Stay connected and track your fitness goals in style.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/watch/300/300.jpg" alt="Smart Watch">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.7)</span>
+                            </div>
+                            <h3 class="product-name">Smart Watch</h3>
+                            <p class="product-price">$299</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Smart Watch', '$299')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Wireless Headphones', '$149', 'https://picsum.photos/seed/headphones/400/400.jpg', 'Premium wireless headphones with active noise cancellation, superior sound quality, and long battery life. Immerse yourself in crystal-clear audio.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/headphones/300/300.jpg" alt="Wireless Headphones">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.8)</span>
+                            </div>
+                            <h3 class="product-name">Wireless Headphones</h3>
+                            <p class="product-price">$149</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Wireless Headphones', '$149')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Gaming Console', '$399', 'https://picsum.photos/seed/console/400/400.jpg', 'Next-generation gaming console with stunning 4K graphics, ultra-fast loading, and exclusive games. Ultimate gaming experience for entertainment enthusiasts.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/console/300/300.jpg" alt="Gaming Console">
+                            <span class="product-badge">Hot</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.7)</span>
+                            </div>
+                            <h3 class="product-name">Gaming Console</h3>
+                            <p class="product-price">$399</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Gaming Console', '$399')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Electronics Section -->
+        <section id="electronics" class="product-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Electronics</h2>
+                <div class="products-grid">
+                    <div class="product-card" onclick="viewProduct('Latest Smartphone', '$699', 'https://picsum.photos/seed/phone/400/400.jpg', 'Cutting-edge smartphone with stunning camera, powerful performance, and 5G connectivity. Experience the future of mobile technology in your hands.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/phone/300/300.jpg" alt="Latest Smartphone">
+                            <span class="product-badge">Hot</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.9)</span>
+                            </div>
+                            <h3 class="product-name">Latest Smartphone</h3>
+                            <p class="product-price">$699</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Latest Smartphone', '$699')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Tablet Pro', '$449', 'https://picsum.photos/seed/tablet/400/400.jpg', 'Professional tablet with brilliant display, powerful processor, and versatile stylus support. Perfect for work, creativity, and entertainment on the go.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/tablet/300/300.jpg" alt="Tablet Pro">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.6)</span>
+                            </div>
+                            <h3 class="product-name">Tablet Pro</h3>
+                            <p class="product-price">$449</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Tablet Pro', '$449')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Digital Camera', '$899', 'https://picsum.photos/seed/camera/400/400.jpg', 'Professional digital camera with exceptional image quality, advanced autofocus, and 4K video recording. Capture your precious moments in stunning detail.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/camera/300/300.jpg" alt="Digital Camera">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.5)</span>
+                            </div>
+                            <h3 class="product-name">Digital Camera</h3>
+                            <p class="product-price">$899</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Digital Camera', '$899')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Bluetooth Speaker', '$79', 'https://picsum.photos/seed/speaker/400/400.jpg', 'Portable Bluetooth speaker with impressive sound quality, waterproof design, and long battery life. Take your music anywhere with powerful, room-filling audio.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/speaker/300/300.jpg" alt="Bluetooth Speaker">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.7)</span>
+                            </div>
+                            <h3 class="product-name">Bluetooth Speaker</h3>
+                            <p class="product-price">$79</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Bluetooth Speaker', '$79')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Fitness Tracker', '$59', 'https://picsum.photos/seed/fitness/400/400.jpg', 'Advanced fitness tracker with heart rate monitoring, sleep tracking, and workout detection. Achieve your fitness goals with comprehensive health insights and motivation.', 'Electronics')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/fitness/300/300.jpg" alt="Fitness Tracker">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.5)</span>
+                            </div>
+                            <h3 class="product-name">Fitness Tracker</h3>
+                            <p class="product-price">$59</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Fitness Tracker', '$59')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fashion Section -->
+        <section id="fashion" class="product-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Fashion</h2>
+                <div class="products-grid">
+                    <div class="product-card" onclick="viewProduct('Designer T-Shirt', '$29', 'https://picsum.photos/seed/tshirt/400/400.jpg', 'Premium quality designer t-shirt made from soft, breathable cotton. Features modern fit and stylish design perfect for casual and semi-formal occasions.', 'Fashion')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/tshirt/300/300.jpg" alt="Designer T-Shirt">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.8)</span>
+                            </div>
+                            <h3 class="product-name">Designer T-Shirt</h3>
+                            <p class="product-price">$29</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Designer T-Shirt', '$29')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Premium Jeans', '$89', 'https://picsum.photos/seed/jeans/400/400.jpg', 'High-quality premium jeans with perfect fit and exceptional comfort. Made from durable denim with modern styling that never goes out of fashion.', 'Fashion')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/jeans/300/300.jpg" alt="Premium Jeans">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.6)</span>
+                            </div>
+                            <h3 class="product-name">Premium Jeans</h3>
+                            <p class="product-price">$89</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Premium Jeans', '$89')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Elegant Dress', '$129', 'https://picsum.photos/seed/dress/400/400.jpg', 'Stunning elegant dress designed for special occasions. Features beautiful silhouette, premium fabric, and exquisite craftsmanship that will make you stand out.', 'Fashion')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/dress/300/300.jpg" alt="Elegant Dress">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.9)</span>
+                            </div>
+                            <h3 class="product-name">Elegant Dress</h3>
+                            <p class="product-price">$129</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Elegant Dress', '$129')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Stylish Jacket', '$159', 'https://picsum.photos/seed/jacket/400/400.jpg', 'Fashionable stylish jacket perfect for all seasons. Combines warmth, comfort, and contemporary design to keep you looking sharp wherever you go.', 'Fashion')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/jacket/300/300.jpg" alt="Stylish Jacket">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.7)</span>
+                            </div>
+                            <h3 class="product-name">Stylish Jacket</h3>
+                            <p class="product-price">$159</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Stylish Jacket', '$159')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Sports Shoes', '$89', 'https://picsum.photos/seed/shoes/400/400.jpg', 'Premium sports shoes with advanced cushioning and breathable mesh design. Perfect for running, training, and casual wear with superior comfort and style.', 'Fashion')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/shoes/300/300.jpg" alt="Sports Shoes">
+                            <span class="product-badge">Popular</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.8)</span>
+                            </div>
+                            <h3 class="product-name">Sports Shoes</h3>
+                            <p class="product-price">$89</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Sports Shoes', '$89')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories Section -->
+        <section id="accessories" class="product-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Accessories</h2>
+                <div class="products-grid">
+                    <div class="product-card" onclick="viewProduct('Leather Bag', '$199', 'https://picsum.photos/seed/bag/400/400.jpg', 'Genuine leather bag with elegant design and spacious compartments. Perfect blend of style and functionality for the modern professional.', 'Accessories')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/bag/300/300.jpg" alt="Leather Bag">
+                            <span class="product-badge">Luxury</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.9)</span>
+                            </div>
+                            <h3 class="product-name">Leather Bag</h3>
+                            <p class="product-price">$199</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Leather Bag', '$199')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Premium Wallet', '$49', 'https://picsum.photos/seed/wallet/400/400.jpg', 'Handcrafted premium leather wallet with RFID protection and multiple card slots. Combines security, style, and practicality in one elegant package.', 'Accessories')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/wallet/300/300.jpg" alt="Premium Wallet">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.8)</span>
+                            </div>
+                            <h3 class="product-name">Premium Wallet</h3>
+                            <p class="product-price">$49</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Premium Wallet', '$49')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Classic Belt', '$69', 'https://picsum.photos/seed/belt/400/400.jpg', 'Premium quality classic belt made from genuine leather. Features adjustable buckle and timeless design that complements any outfit perfectly.', 'Accessories')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/belt/300/300.jpg" alt="Classic Belt">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.6)</span>
+                            </div>
+                            <h3 class="product-name">Classic Belt</h3>
+                            <p class="product-price">$69</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Classic Belt', '$69')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Sunglasses', '$89', 'https://picsum.photos/seed/sunglasses/400/400.jpg', 'Stylish polarized sunglasses with UV400 protection. Combine fashion and eye protection with these premium quality shades perfect for any occasion.', 'Accessories')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/sunglasses/300/300.jpg" alt="Sunglasses">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.7)</span>
+                            </div>
+                            <h3 class="product-name">Sunglasses</h3>
+                            <p class="product-price">$89</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Sunglasses', '$89')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Smartwatch Band', '$29', 'https://picsum.photos/seed/band/400/400.jpg', 'Premium smartwatch band made from soft silicone with adjustable design. Comfortable, durable, and stylish replacement for your wearable device.', 'Accessories')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/band/300/300.jpg" alt="Smartwatch Band">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.4)</span>
+                            </div>
+                            <h3 class="product-name">Smartwatch Band</h3>
+                            <p class="product-price">$29</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Smartwatch Band', '$29')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home & Kitchen Section -->
+        <section id="home-kitchen" class="product-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Home & Kitchen</h2>
+                <div class="products-grid">
+                    <div class="product-card" onclick="viewProduct('Premium Blender', '$149', 'https://picsum.photos/seed/blender/400/400.jpg', 'High-performance blender with multiple speed settings and powerful motor. Perfect for smoothies, soups, and food preparation with durable stainless steel blades.', 'Home & Kitchen')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/blender/300/300.jpg" alt="Premium Blender">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.8)</span>
+                            </div>
+                            <h3 class="product-name">Premium Blender</h3>
+                            <p class="product-price">$149</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Premium Blender', '$149')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Coffee Maker', '$199', 'https://picsum.photos/seed/coffee/400/400.jpg', 'Programmable coffee maker with built-in grinder and thermal carafe. Wake up to fresh, barista-quality coffee every morning with multiple brewing options.', 'Home & Kitchen')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/coffee/300/300.jpg" alt="Coffee Maker">
+                            <span class="product-badge">Popular</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.9)</span>
+                            </div>
+                            <h3 class="product-name">Coffee Maker</h3>
+                            <p class="product-price">$199</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Coffee Maker', '$199')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Stand Mixer', '$299', 'https://picsum.photos/seed/mixer/400/400.jpg', 'Professional stand mixer with powerful motor and multiple attachments. Essential for baking enthusiasts with planetary mixing action for perfect results every time.', 'Home & Kitchen')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/mixer/300/300.jpg" alt="Stand Mixer">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                                <span class="rating-text">(4.7)</span>
+                            </div>
+                            <h3 class="product-name">Stand Mixer</h3>
+                            <p class="product-price">$299</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Stand Mixer', '$299')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Air Fryer', '$179', 'https://picsum.photos/seed/airfryer/400/400.jpg', 'Healthy air fryer with rapid air technology for crispy, delicious food with little to no oil. Large capacity and multiple preset cooking programs for versatile meal preparation.', 'Home & Kitchen')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/airfryer/300/300.jpg" alt="Air Fryer">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.8)</span>
+                            </div>
+                            <h3 class="product-name">Air Fryer</h3>
+                            <p class="product-price">$179</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Air Fryer', '$179')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="viewProduct('Electric Kettle', '$39', 'https://picsum.photos/seed/kettle/400/400.jpg', 'Fast-boiling electric kettle with temperature control and auto shut-off. Perfect for tea, coffee, and instant meals with sleek design and energy efficiency.', 'Home & Kitchen')">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/kettle/300/300.jpg" alt="Electric Kettle">
+                            <span class="product-badge">Bestseller</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="rating-text">(4.6)</span>
+                            </div>
+                            <h3 class="product-name">Electric Kettle</h3>
+                            <p class="product-price">$39</p>
+                            <button class="btn btn-whatsapp" onclick="event.stopPropagation(); orderOnWhatsApp('Electric Kettle', '$39')">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            </main>
+
+  
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/+923157603693?text=Hi!%20I%20want%20to%20order%20this%20product." target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382C17.139 14.215 15.535 13.425 15.229 13.305C14.923 13.185 14.692 13.125 14.461 13.458C14.23 13.791 13.599 14.525 13.394 14.756C13.189 14.987 12.985 15.012 12.652 14.845C12.319 14.678 11.255 14.344 9.999 13.227C9.009 12.349 8.334 11.262 8.13 10.929C7.925 10.596 8.109 10.406 8.276 10.239C8.426 10.089 8.609 9.839 8.776 9.634C8.943 9.429 9.003 9.277 9.123 9.046C9.243 8.815 9.183 8.61 9.103 8.443C9.023 8.276 8.374 6.672 8.09 6.006C7.814 5.358 7.534 5.445 7.324 5.435C7.125 5.426 6.894 5.424 6.663 5.424C6.432 5.424 6.051 5.506 5.733 5.839C5.415 6.172 4.568 6.962 4.568 8.566C4.568 10.17 5.759 11.721 5.926 11.952C6.093 12.183 8.361 15.637 11.785 17.041C12.565 17.369 13.17 17.565 13.641 17.715C14.423 17.962 15.136 17.93 15.702 17.848C16.332 17.756 17.639 17.063 17.923 16.297C18.207 15.531 18.207 14.883 18.127 14.756C18.047 14.629 17.805 14.549 17.472 14.382Z" fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12C0 14.444 0.739 16.722 2.016 18.603L0 24L5.397 21.984C7.278 23.261 9.556 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM12 22C9.845 22 7.801 21.416 6.041 20.373L2.815 21.185L3.627 17.959C2.584 16.199 2 14.155 2 12C2 6.486 6.486 2 12 2C17.514 2 22 6.486 22 12C22 17.514 17.514 22 12 22Z" fill="currentColor"/>
+            </svg>
+            <span class="whatsapp-text">Chat with us</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

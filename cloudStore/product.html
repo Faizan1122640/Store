@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium product details - CloudStore">
+    <meta name="keywords" content="product details, premium shopping, cloudstore, online shopping, luxury products">
+    <meta name="author" content="CloudStore">
+    <title id="page-title">Product Details - CloudStore</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Premium Product Details - CloudStore">
+    <meta property="og:description" content="Discover our premium product collection with detailed information and instant WhatsApp ordering.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <style>
+        /* Product Detail Page Styles */
+        .product-detail-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-detail-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.03" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,96C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .product-detail-hero .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-detail-title {
+            font-size: var(--font-size-5xl);
+            font-weight: var(--font-weight-extrabold);
+            margin-bottom: var(--space-4);
+            animation: slideInLeft 1s ease;
+        }
+
+        .product-detail-breadcrumb {
+            font-size: var(--font-size-lg);
+            opacity: 0.9;
+            animation: slideInLeft 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .product-detail-breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .product-detail-breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .product-detail-content {
+            padding: var(--space-20) 0;
+            background: var(--neutral-50);
+        }
+
+        .product-detail-container {
+            background: white;
+            border-radius: var(--radius-3xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-2xl);
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid var(--neutral-200);
+        }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .product-image-section {
+            background: var(--neutral-100);
+            padding: var(--space-12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .product-image-container {
+            width: 100%;
+            max-width: 500px;
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            transition: transform var(--transition-normal);
+            background: white;
+        }
+
+        .product-image-container:hover {
+            transform: scale(1.02);
+        }
+
+        .product-detail-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .product-info-section {
+            padding: var(--space-12);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-6);
+        }
+
+        .stars {
+            display: flex;
+            gap: var(--space-1);
+        }
+
+        .star {
+            color: var(--warning-color);
+            font-size: var(--font-size-xl);
+        }
+
+        .rating-text {
+            color: var(--neutral-600);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .product-name {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-extrabold);
+            color: var(--neutral-900);
+            margin-bottom: var(--space-4);
+            line-height: var(--line-height-tight);
+        }
+
+        .product-price {
+            font-size: var(--font-size-5xl);
+            font-weight: var(--font-weight-extrabold);
+            color: var(--secondary-color);
+            margin-bottom: var(--space-8);
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .product-description {
+            color: var(--neutral-600);
+            line-height: var(--line-height-relaxed);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-8);
+        }
+
+        .product-features {
+            margin-bottom: var(--space-10);
+        }
+
+        .product-features h3 {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--neutral-900);
+            margin-bottom: var(--space-6);
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: var(--space-3) 0;
+            color: var(--neutral-700);
+            display: flex;
+            align-items: center;
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-normal);
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: var(--font-weight-bold);
+            margin-right: var(--space-4);
+            font-size: var(--font-size-xl);
+            min-width: 24px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: var(--space-4);
+            flex-wrap: wrap;
+        }
+
+        .btn-back {
+            background: var(--neutral-100);
+            color: var(--neutral-700);
+            padding: var(--space-4) var(--space-8);
+            text-decoration: none;
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            transition: all var(--transition-normal);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-3);
+            border: 2px solid var(--neutral-200);
+        }
+
+        .btn-back:hover {
+            background: var(--neutral-200);
+            color: var(--neutral-900);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-whatsapp-large {
+            background: linear-gradient(135deg, var(--whatsapp-color) 0%, var(--whatsapp-dark) 100%);
+            color: white;
+            padding: var(--space-4) var(--space-8);
+            text-decoration: none;
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            transition: all var(--transition-normal);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-4);
+            font-size: var(--font-size-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-whatsapp-large:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-2xl);
+            background: linear-gradient(135deg, #34d585 0%, var(--whatsapp-color) 100%);
+        }
+
+        .loading-state {
+            text-align: center;
+            padding: var(--space-20) var(--space-8);
+            color: var(--neutral-600);
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--neutral-200);
+            border-top: 4px solid var(--secondary-color);
+            border-radius: var(--radius-full);
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--space-8);
+        }
+
+        .error-state {
+            text-align: center;
+            padding: var(--space-20) var(--space-8);
+            color: var(--error-color);
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            margin-bottom: var(--space-6);
+        }
+
+        .error-message {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-8);
+        }
+
+        .related-products {
+            padding: var(--space-20) 0;
+            background: white;
+        }
+
+        .related-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-8);
+            margin-top: var(--space-12);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-detail-title {
+                font-size: var(--font-size-4xl);
+            }
+
+            .product-name {
+                font-size: var(--font-size-3xl);
+            }
+
+            .product-price {
+                font-size: var(--font-size-4xl);
+            }
+
+            .product-image-section,
+            .product-info-section {
+                padding: var(--space-8);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .product-name {
+                font-size: var(--font-size-2xl);
+            }
+
+            .product-price {
+                font-size: var(--font-size-3xl);
+            }
+
+            .product-image-section,
+            .product-info-section {
+                padding: var(--space-6);
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .btn-back,
+            .btn-whatsapp-large {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .product-image-container {
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-detail-title {
+                font-size: var(--font-size-2xl);
+            }
+
+            .product-name {
+                font-size: var(--font-size-xl);
+            }
+
+            .product-price {
+                font-size: var(--font-size-2xl);
+            }
+
+            .product-image-section,
+            .product-info-section {
+                padding: var(--space-4);
+            }
+
+            .product-description {
+                font-size: var(--font-size-base);
+            }
+
+            .features-list li {
+                font-size: var(--font-size-sm);
+            }
+
+            .product-image-container {
+                max-width: 300px;
+            }
+        }
+
+        /* Enhanced Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .slide-up {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        .product-image-container {
+            animation-delay: 0.1s;
+        }
+
+        .product-rating {
+            animation-delay: 0.2s;
+        }
+
+        .product-name {
+            animation-delay: 0.3s;
+        }
+
+        .product-price {
+            animation-delay: 0.4s;
+        }
+
+        .product-description {
+            animation-delay: 0.5s;
+        }
+
+        .product-features {
+            animation-delay: 0.6s;
+        }
+
+        .product-actions {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo-link">
+                        <h1 class="logo">☁️ CloudStore</h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#electronics" class="nav-link">Electronics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#fashion" class="nav-link">Fashion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#accessories" class="nav-link">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#home-kitchen" class="nav-link">Home & Kitchen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Product Detail Hero -->
+        <section class="product-detail-hero">
+            <div class="container">
+                <h1 class="product-detail-title">Product Details</h1>
+                <div class="product-detail-breadcrumb">
+                    <a href="index.html" style="color: white; text-decoration: none;">Home</a> /
+                    <span id="breadcrumb-category">Product</span> /
+                    <span id="breadcrumb-name">Details</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Detail Content -->
+        <section class="product-detail-content">
+            <div class="container">
+                <div id="product-detail-container" class="product-detail-container">
+                    <!-- Loading state -->
+                    <div id="loading-state" class="loading-state">
+                        <div class="loading-spinner"></div>
+                        <h2>Loading product details...</h2>
+                    </div>
+
+                    <!-- Error state (hidden by default) -->
+                    <div id="error-state" class="error-state" style="display: none;">
+                        <div class="error-icon">⚠️</div>
+                        <h2>Product Not Found</h2>
+                        <p class="error-message">Sorry, we couldn't find the product you're looking for.</p>
+                        <a href="index.html" class="btn btn-primary">Back to Store</a>
+                    </div>
+
+                    <!-- Product content (populated by JavaScript) -->
+                    <div id="product-content" style="display: none;">
+                        <div class="product-detail-grid">
+                            <div class="product-image-section">
+                                <div class="product-image-container fade-in">
+                                    <img id="product-image" src="" alt="" class="product-detail-image">
+                                </div>
+                            </div>
+                            <div class="product-info-section">
+                                <h2 id="product-name" class="product-name slide-up"></h2>
+                                <p id="product-price" class="product-price slide-up"></p>
+                                <p id="product-description" class="product-description slide-up"></p>
+
+                                <div class="product-features slide-up">
+                                    <h3>Key Features</h3>
+                                    <ul class="features-list">
+                                        <li>Premium quality product</li>
+                                        <li>Fast and reliable delivery</li>
+                                        <li>24/7 customer support</li>
+                                        <li>Money-back guarantee</li>
+                                    </ul>
+                                </div>
+
+                                <div class="product-actions slide-up">
+                                    <a href="index.html" class="btn-back">
+                                        ← Back to Store
+                                    </a>
+                                    <a id="whatsapp-order-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-large">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.472 14.382C17.139 14.215 15.535 13.425 15.229 13.305C14.923 13.185 14.692 13.125 14.461 13.458C14.23 13.791 13.599 14.525 13.394 14.756C13.189 14.987 12.985 15.012 12.652 14.845C12.319 14.678 11.255 14.344 9.999 13.227C9.009 12.349 8.334 11.262 8.13 10.929C7.925 10.596 8.109 10.406 8.276 10.239C8.426 10.089 8.609 9.839 8.776 9.634C8.943 9.429 9.003 9.277 9.123 9.046C9.243 8.815 9.183 8.61 9.103 8.443C9.023 8.276 8.374 6.672 8.09 6.006C7.814 5.358 7.534 5.445 7.324 5.435C7.125 5.426 6.894 5.424 6.663 5.424C6.432 5.424 6.051 5.506 5.733 5.839C5.415 6.172 4.568 6.962 4.568 8.566C4.568 10.17 5.759 11.721 5.926 11.952C6.093 12.183 8.361 15.637 11.785 17.041C12.565 17.369 13.17 17.565 13.641 17.715C14.423 17.962 15.136 17.93 15.702 17.848C16.332 17.756 17.639 17.063 17.923 16.297C18.207 15.531 18.207 14.883 18.127 14.756C18.047 14.629 17.805 14.549 17.472 14.382Z" fill="currentColor"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12C0 14.444 0.739 16.722 2.016 18.603L0 24L5.397 21.984C7.278 23.261 9.556 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM12 22C9.845 22 7.801 21.416 6.041 20.373L2.815 21.185L3.627 17.959C2.584 16.199 2 14.155 2 12C2 6.486 6.486 2 12 2C17.514 2 22 6.486 22 12C22 17.514 17.514 22 12 22Z" fill="currentColor"/>
+                                        </svg>
+                                        Order on WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products (Optional - can be enhanced later) -->
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">You Might Also Like</h2>
+                <div class="related-products-grid">
+                    <!-- Related products will be populated dynamically if needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/+923157603693?text=Hi!%20I%20want%20to%20order%20this%20product." target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382C17.139 14.215 15.535 13.425 15.229 13.305C14.923 13.185 14.692 13.125 14.461 13.458C14.23 13.791 13.599 14.525 13.394 14.756C13.189 14.987 12.985 15.012 12.652 14.845C12.319 14.678 11.255 14.344 9.999 13.227C9.009 12.349 8.334 11.262 8.13 10.929C7.925 10.596 8.109 10.406 8.276 10.239C8.426 10.089 8.609 9.839 8.776 9.634C8.943 9.429 9.003 9.277 9.123 9.046C9.243 8.815 9.183 8.61 9.103 8.443C9.023 8.276 8.374 6.672 8.09 6.006C7.814 5.358 7.534 5.445 7.324 5.435C7.125 5.426 6.894 5.424 6.663 5.424C6.432 5.424 6.051 5.506 5.733 5.839C5.415 6.172 4.568 6.962 4.568 8.566C4.568 10.17 5.759 11.721 5.926 11.952C6.093 12.183 8.361 15.637 11.785 17.041C12.565 17.369 13.17 17.565 13.641 17.715C14.423 17.962 15.136 17.93 15.702 17.848C16.332 17.756 17.639 17.063 17.923 16.297C18.207 15.531 18.207 14.883 18.127 14.756C18.047 14.629 17.805 14.549 17.472 14.382Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12C0 14.444 0.739 16.722 2.016 18.603L0 24L5.397 21.984C7.278 23.261 9.556 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM12 22C9.845 22 7.801 21.416 6.041 20.373L2.815 21.185L3.627 17.959C2.584 16.199 2 14.155 2 12C2 6.486 6.486 2 12 2C17.514 2 22 6.486 22 12C22 17.514 17.514 22 12 22Z" fill="white"/>
+            </svg>
+            <span class="whatsapp-text">Chat with us</span>
+        </a>
+    </div>
+
+    <script>
+        // Get URL parameters
+        function getURLParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Load product details
+        function loadProductDetails() {
+            const name = getURLParameter('name');
+            const price = getURLParameter('price');
+            const image = getURLParameter('image');
+            const description = getURLParameter('desc');
+            const category = getURLParameter('category') || 'Product';
+
+            // Simulate loading delay for better UX
+            setTimeout(() => {
+                if (!name) {
+                    // Show error state
+                    document.getElementById('loading-state').style.display = 'none';
+                    document.getElementById('error-state').style.display = 'block';
+                    return;
+                }
+
+                // Update page title
+                document.getElementById('page-title').textContent = `${name} - CloudStore`;
+
+                // Update breadcrumb
+                document.getElementById('breadcrumb-category').textContent = category;
+                document.getElementById('breadcrumb-name').textContent = name;
+
+                // Update product details
+                document.getElementById('product-name').textContent = name;
+                document.getElementById('product-price').textContent = price;
+                document.getElementById('product-description').textContent = description || 'High-quality product with premium features and reliable performance.';
+
+                // Update product image
+                const productImage = document.getElementById('product-image');
+                productImage.src = image || 'https://picsum.photos/seed/default/400/400.jpg';
+                productImage.alt = name;
+
+                // Update WhatsApp button
+                const whatsappOrderBtn = document.getElementById('whatsapp-order-btn');
+                const message = `Hi! I want to order ${name}. Price: ${price}. Is it available?`;
+                whatsappOrderBtn.href = `https://wa.me/+923157603693?text=${encodeURIComponent(message)}`;
+
+                // Show product content, hide loading
+                document.getElementById('loading-state').style.display = 'none';
+                document.getElementById('product-content').style.display = 'block';
+
+                // Track product view
+                if (typeof trackEvent === 'function') {
+                    trackEvent('product_view', {
+                        product_name: name,
+                        product_price: price,
+                        product_category: category
+                    });
+                }
+
+                console.log('Product details loaded successfully:', { name, price, image, description, category });
+            }, 800); // Simulate loading time
+        }
+
+        // Handle image loading error
+        function handleImageError() {
+            const productImage = document.getElementById('product-image');
+            productImage.src = 'https://picsum.photos/seed/fallback/400/400.jpg';
+            productImage.onerror = null; // Prevent infinite loop
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProductDetails();
+
+            // Add image error handling
+            document.getElementById('product-image').addEventListener('error', handleImageError);
+
+            // Track product detail page load
+            if (typeof trackEvent === 'function') {
+                trackEvent('product_detail_page_load');
+            }
+        });
+
+        // Include mobile navigation functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About CloudStore - Learn about our mission to provide quality products with convenient WhatsApp ordering.">
+    <meta name="keywords" content="about cloudstore, our mission, online shopping, whatsapp commerce">
+    <meta name="author" content="CloudStore">
+    <title>About Us - CloudStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            color: white;
+        }
+
+        .about-hero .container {
+            text-align: center;
+        }
+
+        .about-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: slideInLeft 1s ease;
+        }
+
+        .about-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            animation: slideInLeft 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .about-content {
+            padding: 80px 0;
+        }
+
+        .mission-section {
+            background-color: #f8fafc;
+            padding: 60px 0;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .mission-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .mission-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .values-section {
+            padding: 60px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            text-align: center;
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .value-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-description {
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .team-section {
+            background-color: #f8fafc;
+            padding: 60px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+
+        .team-role {
+            color: #10b981;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-bio {
+            color: #6b7280;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 2.5rem;
+            }
+
+            .about-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .mission-grid,
+            .values-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo-link">
+                        <h1 class="logo">☁️ CloudStore</h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#electronics" class="nav-link">Electronics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#fashion" class="nav-link">Fashion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#accessories" class="nav-link">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#home-kitchen" class="nav-link">Home & Kitchen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <h1 class="about-title">About CloudStore</h1>
+                <p class="about-subtitle">Revolutionizing online shopping with WhatsApp-powered commerce</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <h2 class="section-title">Our Mission</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: #6b7280; font-size: 1.1rem; line-height: 1.6;">
+                    At CloudStore, we're committed to making online shopping simple, accessible, and personal. By integrating directly with WhatsApp, we bring the store to your fingertips, making it easier than ever to discover and purchase quality products.
+                </p>
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon">🛍️</div>
+                        <h3 class="mission-title">Quality Products</h3>
+                        <p class="mission-description">
+                            We carefully curate our product selection to ensure every item meets our high standards for quality, durability, and value.
+                        </p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">💬</div>
+                        <h3 class="mission-title">Simple Communication</h3>
+                        <p class="mission-description">
+                            No complicated forms or checkout processes. Just click, chat, and order through the app you already use every day.
+                        </p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">🚀</div>
+                        <h3 class="mission-title">Fast Service</h3>
+                        <p class="mission-description">
+                            From browsing to ordering, we've streamlined every step to make your shopping experience quick and efficient.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">🎯</div>
+                        <h3 class="value-title">Customer First</h3>
+                        <p class="value-description">
+                            Your satisfaction is our priority. We're here to make shopping enjoyable and hassle-free.
+                        </p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <h3 class="value-title">Trust & Transparency</h3>
+                        <p class="value-description">
+                            Honest pricing, clear communication, and reliable service in everything we do.
+                        </p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">💡</div>
+                        <h3 class="value-title">Innovation</h3>
+                        <p class="value-description">
+                            Constantly improving and finding new ways to make online shopping better.
+                        </p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🌱</div>
+                        <h3 class="value-title">Sustainability</h3>
+                        <p class="value-description">
+                            Supporting eco-friendly products and sustainable business practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-avatar">👨‍💼</div>
+                        <h3 class="team-name">Sarah Johnson</h3>
+                        <p class="team-role">Founder & CEO</p>
+                        <p class="team-bio">
+                            Passionate about making e-commerce accessible to everyone through innovative solutions.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-avatar">👩‍💻</div>
+                        <h3 class="team-name">Michael Chen</h3>
+                        <p class="team-role">Head of Technology</p>
+                        <p class="team-bio">
+                            Ensuring our platform is secure, fast, and user-friendly for all customers.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-avatar">👩‍🎨</div>
+                        <h3 class="team-name">Emily Rodriguez</h3>
+                        <p class="team-role">Product Curator</p>
+                        <p class="team-bio">
+                            Selecting the best products that meet our quality standards and customer needs.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-avatar">👨‍📞</div>
+                        <h3 class="team-name">David Kim</h3>
+                        <p class="team-role">Customer Success</p>
+                        <p class="team-bio">
+                            Dedicated to ensuring every customer has an amazing shopping experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Ready to Start Shopping?</h2>
+                <p class="cta-description">
+                    Join thousands of satisfied customers who enjoy simple, WhatsApp-powered shopping
+                </p>
+                <a href="index.html" class="btn btn-primary" style="background-color: white; color: #10b981; font-size: 1.1rem; padding: 15px 30px;">
+                    Start Shopping Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/+923157603693?text=Hi!%20I%20want%20to%20order%20this%20product." target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382C17.139 14.215 15.535 13.425 15.229 13.305C14.923 13.185 14.692 13.125 14.461 13.458C14.23 13.791 13.599 14.525 13.394 14.756C13.189 14.987 12.985 15.012 12.652 14.845C12.319 14.678 11.255 14.344 9.999 13.227C9.009 12.349 8.334 11.262 8.13 10.929C7.925 10.596 8.109 10.406 8.276 10.239C8.426 10.089 8.609 9.839 8.776 9.634C8.943 9.429 9.003 9.277 9.123 9.046C9.243 8.815 9.183 8.61 9.103 8.443C9.023 8.276 8.374 6.672 8.09 6.006C7.814 5.358 7.534 5.445 7.324 5.435C7.125 5.426 6.894 5.424 6.663 5.424C6.432 5.424 6.051 5.506 5.733 5.839C5.415 6.172 4.568 6.962 4.568 8.566C4.568 10.17 5.759 11.721 5.926 11.952C6.093 12.183 8.361 15.637 11.785 17.041C12.565 17.369 13.17 17.565 13.641 17.715C14.423 17.962 15.136 17.93 15.702 17.848C16.332 17.756 17.639 17.063 17.923 16.297C18.207 15.531 18.207 14.883 18.127 14.756C18.047 14.629 17.805 14.549 17.472 14.382Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12C0 14.444 0.739 16.722 2.016 18.603L0 24L5.397 21.984C7.278 23.261 9.556 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM12 22C9.845 22 7.801 21.416 6.041 20.373L2.815 21.185L3.627 17.959C2.584 16.199 2 14.155 2 12C2 6.486 6.486 2 12 2C17.514 2 22 6.486 22 12C22 17.514 17.514 22 12 22Z" fill="white"/>
+            </svg>
+            <span class="whatsapp-text">Chat with us</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
